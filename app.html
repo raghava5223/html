@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Click</title>
+</head>
+<body>
+
+<button>Click me</button>
+<button>reset</button>
+
+<script>
+  const btn = document.querySelector("button");
+
+  const random = (max) => {
+    return Math.floor(Math.random() * max);
+  };
+
+  btn.addEventListener("click", () => {
+    const r = random(255);
+    const g = random(255);
+    const b = random(255);
+
+    document.body.style.backgroundColor =
+      "rgb(" + r + "," + g + "," + b + ")";
+
+  });
+</script>
+
+
+</body>
+</html>

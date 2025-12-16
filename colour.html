@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="colorBtn">Click me</button>
+<button id="resetBtn">Reset</button>
+<button id="greenBtn">green</button>
+<button id="redbtn">redbtn</button>
+<script>
+  const colorBtn = document.querySelector("#colorBtn");
+  const resetBtn = document.querySelector("#resetBtn");
+
+  const random = max => Math.floor(Math.random() * max);
+
+  colorBtn.addEventListener("click", () => {
+    const r = random(255);
+    const g = random(255);
+    const b = random(255);
+
+    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  });
+
+  resetBtn.addEventListener("click", () => {
+    document.body.style.backgroundColor = "white";
+  });
+   
+   greenBtn.addEventListener("click", () => {
+    document.body.style.backgroundColor="green";
+   });
+
+   redbtn.addEventListener("click",()=>{
+    document.body.style.backgroundColor="red";
+
+   });
+</script>
+
+    
+</body>
+</html>
